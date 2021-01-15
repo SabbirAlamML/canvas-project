@@ -1,0 +1,11 @@
+com/console/drawing/shapes/RectangleTest.class
+com/console/drawing/commands/BucketFillCommandTest.class
+com/console/drawing/shapes/LineTest.class
+com/console/drawing/commands/CreateCanvasCommandTest.class
+com/console/drawing/commands/DrawLineCommandTest.class
+com/console/drawing/commands/DrawRectangleCommandTest.class
+com/console/drawing/util/ValidationUtilityTest.class
+com/console/drawing/shapes/BucketFillTest.class
+com/console/drawing/shapes/PointTest.class
+com/console/drawing/shapes/ShapeFactoryTest.class
+com/console/drawing/commands/CommandFactoryTest.class
