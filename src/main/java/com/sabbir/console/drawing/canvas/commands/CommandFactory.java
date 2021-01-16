@@ -13,11 +13,11 @@ public class CommandFactory {
         final String[] params  = Arrays.copyOfRange(split, 1, split.length);
 
         switch (command) {
-            case "Q": return new QuitCommand();
-            case "C": return new CreateCommand(params);
+            case "C": return new CreateCanvasCommand(params);
             case "L": return new DrawLineCommand(params);
             case "R": return new DrawRectangleCommand(params);
             case "B": return new BucketFillCommand(params);
+            case "Q": return new QuitCommand();
             default: throw new IllegalArgumentException(String.format("Invalid command %s", command));
         }
 

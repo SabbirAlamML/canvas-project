@@ -20,13 +20,13 @@ public final class ValidationUtility {
         return Arrays.stream(numbers).anyMatch(n -> Integer.signum(n) < 0);
     }
 
-    public static boolean isNumeric(String number) {
+    public static boolean isNumericValue(String number) {
         return number.matches(NUMERIC);
     }
 
-    public static int toPositiveInt(String number) {
+    public static int toPositiveIntNumber(String number) {
 
-        if(!isNumeric(number))
+        if(!isNumericValue(number))
             throw new IllegalArgumentException(String.format("Please enter numeric (%s)", number));
 
         int num = Integer.valueOf(number);

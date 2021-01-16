@@ -1,6 +1,6 @@
 package com.sabbir.console.drawing.canvas.commands;
 
-import static com.sabbir.console.drawing.canvas.util.ValidationUtility.toPositiveInt;
+import static com.sabbir.console.drawing.canvas.util.ValidationUtility.toPositiveIntNumber;
 
 public class BucketFillCommand implements DrawShapeCommand {
     private static final String helpMessage = "B x y c         Should fill the entire area connected to (x,y) with \"colour\" c. The\n" +
@@ -19,8 +19,8 @@ public class BucketFillCommand implements DrawShapeCommand {
         if (params[2].length() != 1)
             throw new IllegalArgumentException(String.format("Color character should only be 1 character. \n%s", helpMessage));
 
-        x = toPositiveInt(params[0]);
-        y = toPositiveInt(params[1]);
+        x = toPositiveIntNumber(params[0]);
+        y = toPositiveIntNumber(params[1]);
         color = params[2];
     }
 

@@ -1,6 +1,6 @@
 package com.sabbir.console.drawing.canvas.commands;
 
-import static com.sabbir.console.drawing.canvas.util.ValidationUtility.toPositiveInt;
+import static com.sabbir.console.drawing.canvas.util.ValidationUtility.toPositiveIntNumber;
 
 public class DrawLineCommand implements DrawShapeCommand {
 
@@ -18,10 +18,10 @@ public class DrawLineCommand implements DrawShapeCommand {
         if (params.length < 4)
             throw new IllegalArgumentException(String.format("Draw line command expects 4 params. \n%s", helpMessage));
 
-            x1 = toPositiveInt(params[0]);
-            y1 = toPositiveInt(params[1]);
-            x2 = toPositiveInt(params[2]);
-            y2 = toPositiveInt(params[3]);
+            x1 = toPositiveIntNumber(params[0]);
+            y1 = toPositiveIntNumber(params[1]);
+            x2 = toPositiveIntNumber(params[2]);
+            y2 = toPositiveIntNumber(params[3]);
 
         if (x1 != x2 && y1 != y2)
             throw new IllegalArgumentException(String.format("Draw line does not support diagonal line at the moment. \n%s", helpMessage));

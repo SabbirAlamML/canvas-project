@@ -28,7 +28,7 @@ public class CommandFactoryTest {
     @Test
     public void getCommand3() throws Exception {
         Command command = commandFactory.getCommand("C 20 4");
-        assertThat(command, instanceOf(CreateCommand.class));
+        assertThat(command, instanceOf(CreateCanvasCommand.class));
     }
 
     @Test(expected = IllegalArgumentException.class)

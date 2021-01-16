@@ -1,13 +1,9 @@
 package com.sabbir.console.drawing.canvas;
 
+import com.sabbir.console.drawing.canvas.commands.*;
 import com.sabbir.console.drawing.canvas.shapes.Canvas;
 import com.sabbir.console.drawing.canvas.shapes.CanvasBody;
 import com.sabbir.console.drawing.canvas.shapes.ShapeFactory;
-import com.sabbir.console.drawing.canvas.commands.Command;
-import com.sabbir.console.drawing.canvas.commands.CommandFactory;
-import com.sabbir.console.drawing.canvas.commands.CreateCommand;
-import com.sabbir.console.drawing.canvas.commands.DrawShapeCommand;
-import com.sabbir.console.drawing.canvas.commands.QuitCommand;
 
 import java.util.Scanner;
 
@@ -46,16 +42,17 @@ public class DrawingCanvasBoard {
             System.out.println("Command syntax is not correct: " + e.getMessage());
         }
 
-        if (command instanceof QuitCommand)
-            quit();
-
-        if (command instanceof CreateCommand) {
-            createNewCanvas((CreateCommand) command);
+        if (command instanceof CreateCanvasCommand) {
+            createNewCanvas((CreateCanvasCommand) command);
             return;
         }
 
         if (command instanceof DrawShapeCommand) {
             draw((DrawShapeCommand) command);
+        }
+
+        if (command instanceof QuitCommand) {
+            quit();
         }
     }
 
@@ -74,7 +71,7 @@ public class DrawingCanvasBoard {
         }
     }
 
-    private static void createNewCanvas(CreateCommand command) {
+    private static void createNewCanvas(CreateCanvasCommand command) {
         canvas = new CanvasBody(command.getWidth(), command.getHeight());
         System.out.println(canvas.render());
     }
