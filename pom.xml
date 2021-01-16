@@ -36,7 +36,7 @@
                     <archive>
                         <manifest>
                             <addClasspath>true</addClasspath>
-                            <mainClass>com.console.drawing.DrawingBoard</mainClass>
+                            <mainClass>com.sabbir.console.drawing.canvas.DrawingCanvasBoard</mainClass>
                         </manifest>
                     </archive>
                 </configuration>
@@ -46,7 +46,7 @@
                 <artifactId>exec-maven-plugin</artifactId>
                 <version>1.3.2</version>
                 <configuration>
-                    <mainClass>com.console.drawing.DrawingBoard</mainClass>
+                    <mainClass>com.sabbir.console.drawing.canvas.DrawingCanvasBoard</mainClass>
                 </configuration>
             </plugin>
             <plugin>

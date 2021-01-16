@@ -1,26 +1,20 @@
 # Console-drawing
-Console drawing program
+This is Console Java program
 
-# Software tools used
-1. Java 8
-2. Collections
-3. Maven
-4. Intellij
+# Software used for development are
+1. Intellij
+2. Maven
+3. Java 8
+4. Collections
 
 # Known issues
-DOS does not support color on console, therefore it is insisted to run on Linux terminal or Intellij IDE
+Please run this program in Eclipse/Intellij/NetBeans
 
 # Steps
-* Clone the repository https://github.com/adityapant1286/console-drawing.git
+* Clone the repository https://github.com/SabbirAlamML/canvas-project.git
 * Import in Intellij/Eclipse/NetBeans
 * Maven build = mvn clean install
-* Run com.console.DrawingBoard.java from IDE OR
-* Login to Linux (Due to known issue)
-* Copy generated `console-drawing-1.0.jar` file to a directory
-* Assuming Java 8 is installed and JAVA_HOME is set in environment classpath
-* Run following command to run the program
-* `java -jar console-drawing-1.0.jar`
-* Enter command as per below table
+* Run com.console.DrawingCanvasBoard.java from IDE
 
 
 # Usage
@@ -33,4 +27,4 @@ DOS does not support color on console, therefore it is insisted to run on Linux 
   Q              | Quit.
 
  # Main class
- com.console.DrawingBoard.java
+ com.console.DrawingCanvasBoard.java
